@@ -591,7 +591,7 @@ do --//Main Gui
 		TextLabel.Position = UDim2.new(0.00658436213, 0, 0, 0)-UDim2.new(0,0,1,0)
 		TextLabel.Size = UDim2.new(0, 200, 0, 32)
 		TextLabel.Font = Enum.Font.Cartoon
-		TextLabel.Text = "RS Admin, Tiger Admin Spanish"
+		TextLabel.Text = "RS Admin"
 		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TextLabel.TextScaled = true
 		TextLabel.TextSize = 14.000
@@ -1656,7 +1656,7 @@ do
 		elseif a == "off" then
 			States[b] = false
 		end
-		Notif(b.." is now set to "..tostring(States[b]))
+		Notif(b.." ha sido cambiado a "..tostring(States[b]))
 	end
 	Add_Command("cmds",function(Args)
 
@@ -1680,10 +1680,10 @@ do
 	end,"Te muestra todos los comandos")
 	Add_Command("rejoin",function(Args)
 		local Args = GetArgs(Args)
-		Notif("Rejoining...")
+		Notif("Reuniendote al servidor...")
 		wait(.3)
 		if #game:GetService("Players"):GetPlayers() ==1 then
-			game:GetService("Players").LocalPlayer:Kick("Espera ctm.")
+			game:GetService("Players").LocalPlayer:Kick("Espera >3.")
 			game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 		else
 			game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
@@ -1729,7 +1729,7 @@ do
 			Notif("¿No has eligido a una prefix?")
 		end
 
-	end,"sets a prefix","STRING_COMMAND")
+	end,"Cambia la prefix a lo que tu quieras","STRING_COMMAND")
 	Add_Command("keycard",function(Args)
 		local Args = GetArgs(Args)
 		keycard()
