@@ -2820,6 +2820,19 @@ do
 			MoveTo(Pos)
 		end
 	end,"Te teletransporta a esa parte")
+	Add_Command("flag",function(Args) 
+		local Args = GetArgs(Args);local Pos  = CFrame.new(725.33, 130.4, 2518.65)
+		if Args[2] then
+			local r = FindPlayer(Args[2])
+			if r then
+				bring(r,Pos)
+			else
+				NotFound()
+			end
+		else
+			MoveTo(Pos)
+		end
+	end,"Te teletransporta a esa parte")
 	Add_Command("lunchroom",function(Args) 
 		local Args = GetArgs(Args);local Pos  = CFrame.new(905, 100, 2226)
 		if Args[2] then
